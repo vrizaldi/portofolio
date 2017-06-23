@@ -1,3 +1,4 @@
+
 // server.js
 // where your node app starts
 
@@ -5,18 +6,42 @@
 var express = require('express');
 var app = express();
 
+var monthNames = ["January", "February", "March",
+                 "April", "May", "June",
+                 "July", "August", "September",
+                 "October", "November", "December"];
+
+function getValidTime(time) {
+  if(/^\d+$/.test(time)) {
+	return parseInt(time);
+
+  } else if(/^[A-Z][a-z]+ \d\d?, \d{4}$/.test(time)) {
+	return time;
+
+  } else {
+	throw err;
+  }
+}
+
 app.get("/timestamp/:time", 
 		function (request, response) {
-			var time = req.params.time
-			var date = new Date(time);
-			if(isNaN(d.getTime())) {
-				// date is invalid
-				response.end("The date given is invalid");
+			try {
+				var time = getValidTime(request.params.time);
+			} catch(err) {
+				response.send("Invalid date format");
 			}
+
+			var date = new Date(time);
+			if(isNaN(date.getTime())) {
+				// date is invalid
+				response.send("The date given is invalid");
+			}
+
 			var timestamp = {
 				unix: date.getTime(),
-				natural: date.getMonth() + " " + date.getDate() 
-						+ ", " + date.getYear();
+				natural: monthNames[date.getMonth()] + " " 
+            + date.getDate() + ", " 
+            + date.getFullYear()
 			};
 			response.json(timestamp);
 		});

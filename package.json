@@ -20,5 +20,7 @@
   "bugs": {
     "url": "https://github.com/vrizaldi/timestamp/issues"
   },
-  "homepage": "https://github.com/vrizaldi/timestamp#readme"
+  "homepage": "https://github.com/vrizaldi/timestamp#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }
