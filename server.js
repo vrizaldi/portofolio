@@ -1,3 +1,4 @@
+
 // server.js
 // where your node app starts
 
@@ -9,14 +10,33 @@ var monthNames = ["January", "February", "March",
                  "April", "May", "June",
                  "July", "August", "September",
                  "October", "November", "December"];
-app.get("/timestamp/:time", 
+
+function getValidTime(time) {
+  if(/^\d+$/.test(time)) {
+	  return parseInt(time);
+
+  } else if(/^[A-Z][a-z]+ \d\d?, \d{4}$/.test(time)) {
+	  return time;
+
+  } else {
+	  throw Error;
+  }
+}
+
+app.get("/:time", 
 		function (request, response) {
-			var time = parseInt(request.params.time);
+			try {
+				var time = getValidTime(request.params.time);
+			} catch(err) {
+				response.send("Invalid timestamp format");
+			}
+
 			var date = new Date(time);
 			if(isNaN(date.getTime())) {
 				// date is invalid
-				response.end("The date given is invalid");
+				response.send("The timestamp given is invalid");
 			}
+
 			var timestamp = {
 				unix: date.getTime(),
 				natural: monthNames[date.getMonth()] + " " 
