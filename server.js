@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static("./public"));
 
 app.get("/", function(request, response) {
-			response.sendFile("./views/index.html");
+			response.sendFile(__dirname + "/views/index.html");
 		});
 
 var monthNames = ["January", "February", "March",
