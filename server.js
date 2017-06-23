@@ -13,6 +13,7 @@ var monthNames = ["January", "February", "March",
 
 function getValidTime(time) {
   if(/^\d+$/.test(time)) {
+
 	  return parseInt(time);
 
   } else if(/^[A-Z][a-z]+ \d\d?, \d{4}$/.test(time)) {
@@ -24,17 +25,22 @@ function getValidTime(time) {
 }
 
 app.get("/:time", 
+
 		function (request, response) {
 			try {
 				var time = getValidTime(request.params.time);
 			} catch(err) {
+
 				response.send("Invalid timestamp format");
+
 			}
 
 			var date = new Date(time);
 			if(isNaN(date.getTime())) {
 				// date is invalid
+
 				response.send("The timestamp given is invalid");
+
 			}
 
 			var timestamp = {
