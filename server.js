@@ -6,6 +6,8 @@
 var express = require('express');
 var app = express();
 
+app.use(express.static("./public"));
+
 var monthNames = ["January", "February", "March",
                  "April", "May", "June",
                  "July", "August", "September",
@@ -46,8 +48,8 @@ app.get("/:time",
 			var timestamp = {
 				unix: date.getTime(),
 				natural: monthNames[date.getMonth()] + " " 
-            + date.getDate() + ", " 
-            + date.getFullYear()
+					+ date.getDate() + ", " 
+					+ date.getFullYear()
 			};
 			response.json(timestamp);
 		});

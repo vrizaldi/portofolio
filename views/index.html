@@ -10,9 +10,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
+    <title>THE Timestamp Microservice</title>
+    <meta name="description" content="Easy timestamp operations">
+	<!--
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+	-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +27,19 @@
             crossorigin="anonymous"></script>
     <script src="/client.js"></script>
 
-    <>
+	<h1>Timestamp Microservice</h1>
+	<p>Gives you Unix and natural timestamp from the provided Unix timestamp
+	or natural timestamp (e.g. March 20, 2001)</p>
+	<h2>Example use:</h2>
+	<ul class="example example-list">
+		<li>Natural: https://the-timestamp-micro.glitch.me/March%2020,%202001</li>
+		<li>Unix: https://the-timestamp-micro.glitch.me/985046400000</li>
+	</ul>
+	<h2>Example output</h2>
+	<p class="example">
+	{<br>
+	&nbsp;&nbsp;unix: 985046400000<br>
+	&nbsp;&nbsp;natural: "March 20, 2001"<br>
+	}</p>
   </body>
 </html>
