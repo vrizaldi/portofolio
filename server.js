@@ -5,33 +5,26 @@
 var express = require('express');
 var app = express();
 
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
-
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (request, response) {
-  response.sendFile(__dirname + '/views/index.html');
-});
-
-app.get("/dreams", function (request, response) {
-  response.send(dreams);
-});
-
-// could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/dreams", function (request, response) {
-  dreams.push(request.query.dream);
-  response.sendStatus(200);
-});
-
-// Simple in-memory store for now
-var dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
+var monthNames = ["January", "February", "March",
+                 "April", "May", "June",
+                 "July", "August", "September",
+                 "October", "November", "December"];
+app.get("/timestamp/:time", 
+		function (request, response) {
+			var time = parseInt(request.params.time);
+			var date = new Date(time);
+			if(isNaN(date.getTime())) {
+				// date is invalid
+				response.end("The date given is invalid");
+			}
+			var timestamp = {
+				unix: date.getTime(),
+				natural: monthNames[date.getMonth()] + " " 
+            + date.getDate() + ", " 
+            + date.getFullYear()
+			};
+			response.json(timestamp);
+		});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
