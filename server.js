@@ -8,6 +8,10 @@ var app = express();
 
 app.use(express.static("./public"));
 
+app.get("/", function(request, response) {
+			response.sendFile("./views/index.html");
+		});
+
 var monthNames = ["January", "February", "March",
                  "April", "May", "June",
                  "July", "August", "September",
