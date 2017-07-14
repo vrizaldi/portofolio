@@ -1,3 +1,4 @@
+var projects = require("./projects.json");
 
 // server.js
 // where your node app starts
@@ -8,57 +9,20 @@ var app = express();
 
 app.use(express.static("./public"));
 
-app.get("/", function(request, response) {
-			response.sendFile(__dirname + "/views/index.html");
-		});
+app.get("/", function(req, res) {
+	res.sendFile(__dirname + "/views/index.html");
+});
 
-var monthNames = ["January", "February", "March",
-                 "April", "May", "June",
-                 "July", "August", "September",
-                 "October", "November", "December"];
+app.get("/get_projects", function(req, res) {
+	res.json(projects);
+});
 
-function getValidTime(time) {
-  if(/^\d+$/.test(time)) {
-
-	  return parseInt(time);
-
-  } else if(/^[A-Z][a-z]+ \d\d?, \d{4}$/.test(time)) {
-	  return time;
-
-  } else {
-	  throw Error;
-  }
-}
-
-app.get("/:time", 
-
-		function (request, response) {
-			try {
-				var time = getValidTime(request.params.time);
-			} catch(err) {
-
-				response.send("Invalid timestamp format");
-
-			}
-
-			var date = new Date(time);
-			if(isNaN(date.getTime())) {
-				// date is invalid
-
-				response.send("The timestamp given is invalid");
-
-			}
-
-			var timestamp = {
-				unix: date.getTime(),
-				natural: monthNames[date.getMonth()] + " " 
-					+ date.getDate() + ", " 
-					+ date.getFullYear()
-			};
-			response.json(timestamp);
-		});
+app.get("*", function(req, res) {
+	res.redirect("/");		// redirect to homepage (only page)
+});
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+const PORT = process.env.PORT ? process.env.PORT : 21701;
+var listener = app.listen(PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });

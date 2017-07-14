@@ -1,0 +1,17 @@
+[
+	{
+		"title": "#winterest",
+		"imageurl": "/ss_winterest.png",
+		"desc": "A pinterest clone app, where you can share your daily wins (with pictures embedded) with others or just sit there, liking at your friends' wins - it's basically a social media"
+	},
+	{
+		"title": "Book Exchange",
+		"imageurl": "/ss_book_exchange.png",
+		"desc": "An app where you can share with others what book you have. If you're interested in one of the books, you can request an exchange!"
+	},
+	{
+		"title": "Stock Chart",
+		"imageurl": "/ss_stock_chart.png",
+		"desc": "A chart of stock market. Look up the share value of your favourite companies. You can add your desired companies to it - it is synchronous between clients, which means everyone looking at the chart would also be notified of the change"
+	}
+]

@@ -1,45 +1,114 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>THE Timestamp Microservice</title>
-    <meta name="description" content="Easy timestamp operations">
+    <title>Verdy Noorghifari</title>
+    <meta name="author" content="vrizaldi">
+		<link id="favicon" rel="icon" href="/favicon.png">
 	<!--
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
 	-->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/style.css">
-  </head>
-  <body>
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
 
-	<h1>Timestamp Microservice</h1>
-	<p>Gives you Unix and natural timestamp from the provided Unix timestamp
-	or natural timestamp (e.g. March 20, 2001)</p>
-	<h2>Example use:</h2>
-	<ul class="example example-list">
-		<li>Natural: https://the-timestamp-micro.glitch.me/March%2020,%202001</li>
-		<li>Unix: https://the-timestamp-micro.glitch.me/985046400000</li>
-	</ul>
-	<h2>Example output</h2>
-	<p class="example">
-	{<br>
-	&nbsp;&nbsp;unix: 985046400000<br>
-	&nbsp;&nbsp;natural: "March 20, 2001"<br>
-	}</p>
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome.min.css" rel="stylesheet">
+		<link href="/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+  	<!-- navbar at the top -->
+  	<header id="top-navbar" role="banner" class="navbar fixed-top">
+  		<div class="row">
+	  		<div id="nav" 
+          class="nav nav-pills fill justify-content-end col-md-12"
+        >
+		  		<a id="about-nav"
+            href="#about" 
+            class="nav-link page-nav active">About</a>
+
+		  		<a id="portofolio-nav" 
+            href="#portofolio" 
+            class="nav-link page-nav">Portofolio</a>
+
+		  		<a id="contact-nav" 
+            href="#contact" 
+            class="nav-link page-nav">Contact</a>
+	  		</div>
+  		</div>
+  	</header>
+
+  	<!-- content -->
+  	<div class="container-fluid">
+  		<div id="about" class="section">
+	  		<h1 id="name">Verdy Noorghifari<h1>
+	  		<h3 id="username">vrizaldi</h3>
+	  		<p>
+		  		A self taught developer who is passionate about Web, Mobile app and open source development; I am eager to learn as more tools are becoming available.
+		  	</p>
+  		</div>
+
+  		<div id="portofolio" class="section">
+  			<h1>&lt;Projects /&gt;</h1>
+  			<p>
+	  			These are the projects that I have done, all open source and available online - you can use them as reference whenever you want. Most of them are stored in Github and I use other websites to host the web page and server: Codepen (for front-end), Heroku and Glitch.com (for full-stack development or API projects)
+  			</p>
+
+  			<div id="projects-wrapper">
+          <div id="grid-sizer"></div>
+        </div>
+
+  		</div>
+
+  		<div id="contact" class="section">
+  			<h1>&lt;Contact /&gt;</h1>
+  			<p>
+  				If you have any business query, want to consult with me or have a suggestion how I could improve this website, please contact me through email - I am very open to opportunity and suggestion.
+  			</p>
+
+  			<div id="contact-form" class="form-group">
+          <div class="form-group">        
+    				<label for="name">Name</label>
+  	  			<input id="full-name" 
+  	  				class="form-control" 
+  	  				placeholder="Your full name here"
+  	  				data-toggle="tooltip"
+  	  				data-placement="right"
+  	  				title="Tell me how I should address you in the response"
+            >	  			
+          </div>
+          <div class="form-group">
+    				<label for="email">Email</label>
+  	  			<input id="email" 
+  	  				class="form-control" 
+              type="email"
+  	  				placeholder="e.g. yourname@someprovider.com"
+  	  				data-toggle="tooltip"
+  	  				data-placement="right"
+  	  				title="Tell me where I should send the response"
+            >	 
+          </div> 			
+          <div class="form-group">
+    				<label for="message">Message</label>
+  	  			<textarea id="message" 
+  	  				class="form-control"
+  	  			  placeholder="Enter your message here! :)"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="What do you have to say?" 
+            ></textarea>
+            <a id="contact-form-submit" class="btn btn-primary" href="" target="blank">Send!</a>  
+          </div>
+        </div>
+  		</div>
+
+  		<footer id="footer">
+  			#moreinfo here
+  		</footer>
+  	</main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/tether.min.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="/client.js"></script>
   </body>
 </html>
