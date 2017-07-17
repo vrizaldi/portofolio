@@ -1,6 +1,7 @@
 /* styles */
 /* called by your view template */
 
+/* body and main container */
 body {
 	margin: 0;
 	padding: 60px 0 0 0;
@@ -13,6 +14,7 @@ body {
 	padding: 0;
 }
 
+/* main nav bar (top) */
 #top-navbar {
 	position: fixed;
 	background-color: #fff;
@@ -22,19 +24,7 @@ body {
 	-o-box-shadow: 0 0px 5px 0px rgb(108, 107, 106);
 }
 
-#nav {
-	right: 0;
-}
-
-#about-nav.active {
-	color: #000;
-	background-color: #fff;
-	border: 1px solid rgb(255, 99, 71);
-	border-top-color: rgb(108, 45, 25);
-	border-bottom-color: #fff;
-}
-
-#portofolio-nav.active {
+.page-nav.active {
 	color: #000;
 	background-color: #fff;
 	border: 1px solid #fff;
@@ -42,21 +32,15 @@ body {
 	border-bottom-color: rgb(161, 186, 245);
 }
 
-#contact-nav.active {
-	color: #000;
-	background-color: #fff;
-	border: 1px solid rgb(161, 186, 245);
-	border-top-color: #fff;
-	border-bottom-color: #000;
-}
-
+/* sections */
 .section {
 	padding: 2em 2em 0 2em;
 	border-bottom-width: 5px;
 	border-bottom-style: dashed;
 }
 
-#about {
+/* about section */
+#about-sec {
 	background-color: rgb(255, 99, 71);
 	text-align: center;
 	padding: 5em 2em 2em 2em;
@@ -64,7 +48,8 @@ body {
 	border-bottom-color: #fff;
 }
 
-#portofolio {
+/* portofolio section */
+#portofolio-sec {
 	background-color: #fff;
 	border-bottom-color: rgb(161, 186, 245);
 }
@@ -74,13 +59,45 @@ body {
 	margin: 1px;
 }
 
-.project {
-	background-color: rgb(228, 230, 236);
-	padding: 10px;
-	width: 18em;
+.project-wrapper, .project-wrapper:hover, .project-wrapper:active, .project-wrapper:visited, .project-wrapper:focus {
+	text-decoration: none;
+	color: inherit;
 }
 
-#contact {
+.project {
+	max-width: 100%;
+	width: 18em;
+
+	transition: background-color 0.1s;
+	-moz-transition: background-color 0.1s;
+	-webkit-transition: background-color 0.1s;
+	-o-transition: background-color 0.1s;
+}
+
+.project:hover {
+	background-color: rgb(189, 238, 242);
+}
+
+.project-img {
+	width: 100%;
+}
+
+.project:active {
+	background-color: #BDC8C9;
+}
+
+.project-info {
+	text-align: left;
+	margin: 0 10px;
+}
+
+.project-link {
+	text-align: center;
+	font-size: 2em; 
+}
+
+/* contact section */
+#contact-sec {
 	color: rgb(60, 60, 61);
 	background-color: rgb(161, 186, 245);
 	border-bottom-color: #000;;
