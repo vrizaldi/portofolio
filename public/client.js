@@ -16,6 +16,8 @@ function init() {
 	// activate tooltips
 	$('[data-toggle="tooltip"]').tooltip();
 
+	// check where in the document the user is looking at
+	checkLocation();
 }
 
 function parseProjects(projects) {
@@ -30,8 +32,8 @@ function parseProjects(projects) {
 						+ '<p class="card-text desc">' + project.desc + '</p>'
 					+ '</div>'
 					+ '<div class="project-link">'
-						+ '<a class="card-link" href="' + project.githuburl + '" target="blank">'
-							+ '<i class="fa fa-github">'
+						+ '<a class="card-link" href="' + project.sourcecodeurl + '" target="blank">'
+							+ '<i class="fa fa-code">'
 						+ '</a>'
 					+ '</div>'
 				+ '</div>'

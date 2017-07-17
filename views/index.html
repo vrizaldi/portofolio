@@ -9,6 +9,7 @@
 	-->
     <meta charset="utf-8">
 
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Josefin+Slab" rel="stylesheet">
     <link href="/bootstrap.min.css" rel="stylesheet">
     <link href="/font-awesome.min.css" rel="stylesheet">
 		<link href="/index.css" rel="stylesheet">
@@ -20,7 +21,7 @@
       <a class="navbar-brand" href="/">vrizaldi</a>
 
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav">
-        <i class="fa fa-toggle-down fa-1x"></i>
+        <i class="fa fa-list fa-1x"></i>
       </button>
 
   		<div id="nav" 
@@ -49,15 +50,29 @@
   	<!-- content -->
   	<main class="container-fluid">
   		<div id="about-sec" class="section">
-	  		<h1 id="name">Verdy Noorghifari<h1>
-	  		<h3 id="username">vrizaldi</h3>
-	  		<p>
+	  		<h1 id="name" class="title">Verdy Noorghifari</h1>
+	  		<p id="bio">
 		  		A self taught developer who is passionate about Web, Mobile app and open source development; I am eager to learn as more technologies are becoming available.
 		  	</p>
+        
   		</div>
 
+      <div id="skills-wrapper" class="section">
+        <ul id="skills">
+          <li><i class="fa fa-html5"></i> HTML5</li>
+          <li><i class="fa fa-css3"></i> CSS3</li>
+          <li>Bootstrap</li>
+          <li>Javascript &amp; ES6</li>
+          <li>JQuery</li>
+          <li>ReactJS + Redux</li>
+          <li>Express.js</li>
+          <li>Node.js</li>
+          <li><i class="fa fa-git"></i> git</li>
+        </ul>
+      </div>
+
   		<div id="portofolio-sec" class="section">
-  			<h1>&lt;Projects /&gt;</h1>
+  			<h1 class="title">&lt;Projects /&gt;</h1>
   			<p>
 	  			These are some of the side projects that I have done, all open source and available online - you can use them as reference whenever you want. Most of them are stored in Github and I use other websites to host the web page and server: Codepen (for front-end), Heroku and Glitch.com (for full-stack development or API projects)
   			</p>
@@ -69,7 +84,7 @@
   		</div>
 
   		<div id="contact-sec" class="section">
-  			<h1>&lt;Contact /&gt;</h1>
+  			<h1 class="title">&lt;Contact /&gt;</h1>
   			<p>
   				If you have any business query, want to consult with me or have a any idea on how I could improve this website, please contact me through email - I am very open to opportunity and suggestion.
   			</p>
@@ -121,7 +136,20 @@
   		</div>
 
   		<footer id="footer">
-  			#moreinfo here
+  			<ul id="soc-med">
+          <li>
+            <a href="https://www.facebook.com/M.VerdyRizaldi"><i class="fa fa-facebook-official"></i></a>
+          </li>
+          <li>
+            <a href="https://codepen.io/vrizaldi/"><i class="fa fa-codepen"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/vrizaldi"><i class="fa fa-github"></i></a>      
+          </li>
+          <li>
+            <a href="https://www.freecodecamp.com/vrizaldi"><i class="fa fa-free-code-camp"></i></a>            
+          </li>
+        </ul>
   		</footer>
   	</main>
 

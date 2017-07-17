@@ -4,55 +4,55 @@
 		"imageurl": "/winterest.png",
 		"desc": "A pinterest clone app, where you can share your daily wins (with pictures embedded) with others or just sit there, liking at your friends' wins - it's basically a social media",
 		"demourl": "https://voyage-baguette-78534.herokuapp.com/",
-		"githuburl": ""
+		"sourcecodeurl": "https://github.com/vrizaldi/winterest"
 	},
 	{
 		"title": "Book Exchange",
 		"imageurl": "book-exchange.png",
 		"desc": "An app where you can share with others what book you have. If you're interested in one of the books, you can request an exchange!",
 		"demourl": "https://pure-fortress-58649.herokuapp.com/",
-		"githuburl": ""
+		"sourcecodeurl": "https://github.com/vrizaldi/book-trade"
 	},
 	{
 		"title": "Stock Chart",
 		"imageurl": "stock-chart.png",
 		"desc": "A chart of stock market. Look up the share value of your favourite companies. You can add your desired companies to it - it is synchronous between clients, which means everyone looking at the chart would also be notified of the change",
 		"demourl": "https://peaceful-fortress-94431.herokuapp.com",
-		"githuburl": ""
+		"sourcecodeurl": "https://github.com/vrizaldi/stock-chart"
 	},
 	{
 		"title": "Night Night",
 		"imageurl": "nightnight.png",
 		"desc": "A nightlife coordination app. Search up bars your the area and plan out your night with friends or family. Just have a good fun!",
 		"demourl": "https://murmuring-escarpment-21704.herokuapp.com",
-		"githuburl": ""
+		"sourcecodeurl": "https://github.com/vrizaldi/nightnight"
 	},
 	{
 		"title": "Polling app",
 		"imageurl": "/polling-app.png",
 		"desc": "Create polls and vote to embrace your opinion. Pie graphs are generated in real time, so you'll know who's winning or whatever your finding immediately!",
 		"demourl": "https://serene-biscayne-11758.herokuapp.com",
-		"githuburl": ""
+		"sourcecodeurl": "https://github.com/vrizaldi/polling-app"
 	},
 	{
 		"title": "Markdown Previewer", 
 		"imageurl": "/markdown-previewer.png",
 		"desc": "A website that gives you preview of the markdown you input - it updates as you type and changes can be seen immediately, allowing you to be as efficient as you can be",
 		"demourl": "https://markdown-preview.glitch.me",
-		"githuburl": ""
+		"sourcecodeurl": "https://github.com/vrizaldi/markdown-preview"
 	},
 	{
 		"title": "Meteorites Map",
 		"imageurl": "/meteorites-map.png",
 		"desc": "An interactive map of meteor sites around the world. Learn about these meteorites: about when they fell and how big they were.",
 		"demourl": "https://codepen.io/vrizaldi/full/YQedMw/",
-		"githuburl": ""
+		"sourcecodeurl": "https://codepen.io/vrizaldi/pen/YQedMw"
 	},
 	{
 		"title": "National Contiguity Force Directed Graph",
 		"imageurl": "/national-contiguity.png",
 		"desc": "An interactive chart that shows which countries share borders with each other in a force directed graph. You can pull each node apart and see how others connected to it are affected by it",
 		"demourl": "https://codepen.io/vrizaldi/full/pwawgJ/",
-		"githuburl": ""
+		"sourcecodeurl": "https://codepen.io/vrizaldi/pen/pwawgJ"
 	}
 ]
