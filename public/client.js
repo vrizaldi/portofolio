@@ -47,7 +47,7 @@ function parseProjects(projects) {
 		columnWidth: "#grid-sizer"
 	});
 
-	$("#projects-wrapper").progress(function() {
+	$("#projects-wrapper").imagesLoaded(function() {
 		// re-layout every time a picture is loaded
 		$("#projects-wrapper").masonry("layout");
 	});
