@@ -41,13 +41,16 @@ function parseProjects(projects) {
 		$("#projects-wrapper").append(element);
 	});
 
-	$("#projects-wrapper").imagesLoaded(function() {
+	// use masonry
+	$("#projects-wrapper").masonry({
+		itemSelector: ".project",
+		columnWidth: "#grid-sizer"
+	});
+
+	$("#projects-wrapper").progress(function() {
 		// re-layout every time a picture is loaded
-		$("#projects-wrapper").masonry({
-			itemSelector: ".project",
-			columnWidth: "#grid-sizer"
-		});
-	})
+		$("#projects-wrapper").masonry("layout");
+	});
 }
 
 function handleScroll(e) {
